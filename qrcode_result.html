@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .website {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 5px;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            width: 10%;
+        }
+        .note {
+            font-size: 14px;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid red;
+            border-radius: 4px;
+            background-color: #ffe6e6;
+            display: none; /* 默认隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <h1>二维码验证信息反馈</h1>
+    <div class="website">www.sxsszfc.com.cn</div>
+    
+    <table>
+        <tr>
+            <th>合同编号</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>备案登记号</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>房屋编号</th>
+            <td>14088220231121172333001208</td>
+        </tr>
+        <tr>
+            <th>签约时间</th>
+            <td>2024-05-17</td>
+        </tr>
+        <tr>
+            <th>合同状态</th>
+            <td>签约未提交备案</td>
+        </tr>
+        <tr>
+            <th>卖方</th>
+            <td>山西合悦置业有限公司</td>
+        </tr>
+        <tr>
+            <th>买方</th>
+            <td>胡琳璋，柴菲</td>
+        </tr>
+        <tr>
+            <th>买方证件号</th>
+            <td>14270319******11，14270319******29</td>
+        </tr>
+        <tr>
+            <th>房屋坐落</th>
+            <td>河津市万春街以东、规划支七街以西合悦·云玺府1幢4单元6层602西</td>
+        </tr>
+    </table>
+    
+    <div class="note">输入合同密码验证后可以查看更详细的合同信息</div>
+     <input type="password" id="password" placeholder="请输入密码">
+    <button onclick="showWrongPassword()">确认</button>
+    <div id="errorMessage" class="error-message">错误：密码不正确！</div>
+    <script>
+        function showWrongPassword() {
+            const errorElement = document.getElementById('errorMessage');
+            
+            // 显示错误信息
+            errorElement.style.display = 'block';
+            
+            // 3秒后自动隐藏（可选）
+            setTimeout(() => {
+                errorElement.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
